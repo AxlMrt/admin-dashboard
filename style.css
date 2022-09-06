@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Prompt;
 }
 
 main{
@@ -35,13 +38,17 @@ nav p{
     grid-column: 9;
 }
 
+header{
+    box-shadow: 0 5px 3px rgb(202, 199, 199) ;
+    position: relative;
+}
+
 header>div{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
 }
-
 
 
 .sidebar{
@@ -51,6 +58,10 @@ header>div{
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,109,121,1) 51%, rgba(0,212,255,1) 99%);;
     display: grid;
     gap: 50px;
+}
+
+.sidebar h1{
+    color: #fff;
 }
 
 .sidebar .home{
@@ -77,7 +88,7 @@ header>div{
     display: grid;
     grid-template-columns: 1fr 250px;
     padding: 2em;
-    background: rgb(196, 201, 209, .5);
+    background: rgb(226, 232, 241);
 }
 
 .mainContent .projects>div{
@@ -90,23 +101,42 @@ header>div{
     margin-left: 1em;
 }
 
-
-/* Here until content*/
 .mainContent .project{
     background: #fff;
     border-radius: 10px;
-    border-left: 4px solid #fbbf24;
-
+    border-left: 5px solid #fbbf24;
+    padding: 1em;
+    display: grid;
+    gap: 15px;
+    cursor: pointer;
 }
 
 .mainContent .announce>div{
-    background: red;
-    height: 100px;
-    
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    display: grid;
+    gap: 15px;
+}
+
+.mainContent .trend{
+    margin-top: 2em;
 }
 
 .mainContent .trending{
-    background: red;
+    background: #fff;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 10px;
+    display: grid;
+    gap: 15px;
 }
 
+.mainContent p{
+    color: grey
+}
 
+.mainContent .project:hover{
+    transform: scale(1.02);
+    transition: all .4s ease;
+}
