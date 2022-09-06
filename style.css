@@ -17,10 +17,24 @@ main{
     grid-template-columns: 250px 1fr;
 }
 
+header>nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+header>div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
 .sidebar{
-    background: rgb(25, 180, 252);
     grid-column: 1 / 2;
     grid-row: 1 / 4;
+    padding: 2em;
+    background: rgb(25, 180, 252);
     display: grid;
     gap: 50px;
 }
@@ -39,6 +53,7 @@ main{
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 250px;
+    padding: 2em;
 }
 
 .mainContent .projects>div{
