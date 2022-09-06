@@ -62,27 +62,25 @@ header>div{
     gap: 10px;
 }
 
+.mainContent .announcement{
+    margin-left: 1em;
+}
+
+
+/* Here until content*/
 .mainContent .project{
-
     background: grey;
-    width: 100px;
     height: 100px;
 }
 
-.mainContent .announcement>div{
+.mainContent .announce>div{
     background: red;
-    width: 100px;
     height: 100px;
-}
-
-
-.mainContent .announce{
-    grid-column: 2 / 3;
+    
 }
 
 .mainContent .trending{
-    grid-column: 2 / 3;
+    background: red;
 }
-
 
 
