@@ -17,10 +17,22 @@ main{
     grid-template-columns: 250px 1fr;
 }
 
-header>nav{
-    display: flex;
-    justify-content: space-between;
+nav{
+    display: grid;
+    grid-template-columns: repeat(3, 2em 1fr 5em);
+    align-items: center;
     padding: 1em;
+}
+
+nav>input{
+    grid-column: 2 / 6;
+    background: rgb(212, 211, 211, .5);
+    border-radius: 30px;
+    border: none;
+}
+
+nav p{
+    grid-column: 9;
 }
 
 header>div{
@@ -30,23 +42,34 @@ header>div{
     padding: 1em;
 }
 
+
+
 .sidebar{
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     padding: 2em;
-    background: rgb(25, 180, 252);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,109,121,1) 51%, rgba(0,212,255,1) 99%);;
     display: grid;
     gap: 50px;
 }
 
 .sidebar .home{
     display: grid;
-    gap: 15px;
+    gap: 20px;
 }
 
 .sidebar .setting{
+    grid-row: 4 / 5;
     display: grid;
-    gap: 15px;
+    gap: 20px;
+}
+
+.sidebar a{
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .mainContent{
@@ -54,12 +77,13 @@ header>div{
     display: grid;
     grid-template-columns: 1fr 250px;
     padding: 2em;
+    background: rgb(196, 201, 209, .5);
 }
 
 .mainContent .projects>div{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 25px;
 }
 
 .mainContent .announcement{
@@ -69,8 +93,10 @@ header>div{
 
 /* Here until content*/
 .mainContent .project{
-    background: grey;
-    height: 100px;
+    background: #fff;
+    border-radius: 10px;
+    border-left: 4px solid #fbbf24;
+
 }
 
 .mainContent .announce>div{
