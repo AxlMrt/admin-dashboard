@@ -22,20 +22,33 @@ main{
 
 nav{
     display: grid;
-    grid-template-columns: repeat(3, 2em 1fr 5em);
+    grid-template-columns: repeat(3, 2em 1fr 200px);
     align-items: center;
     padding: 1em;
 }
 
+nav img{
+    cursor: pointer;
+}
+
 nav>input{
     grid-column: 2 / 6;
+    min-height: 2em;
     background: rgb(212, 211, 211, .5);
     border-radius: 30px;
     border: none;
 }
 
-nav p{
+nav .ring{
+    grid-column: 8 / 9;
+}
+
+nav a{
     grid-column: 9;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 header{
@@ -50,6 +63,27 @@ header>div{
     padding: 1em;
 }
 
+header .name img{
+    height: 100px;
+}
+
+header .name {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.btn button{
+    margin-right: 2em;
+    min-height: 2em;
+    min-width: 6em;
+    background: #00a2c2;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
 
 .sidebar{
     grid-column: 1 / 2;
@@ -98,7 +132,7 @@ header>div{
 }
 
 .mainContent .announcement{
-    margin-left: 1em;
+    margin-left: 1.5em;
 }
 
 .mainContent .project{
@@ -111,29 +145,46 @@ header>div{
     cursor: pointer;
 }
 
-.mainContent .announce>div{
+.mainContent .announce .infos{
     background: #fff;
     padding: 1em;
     border-radius: 10px;
     display: grid;
-    gap: 15px;
+    gap: 30px;
 }
 
-.mainContent .trend{
-    margin-top: 2em;
+.infos>div{
+    cursor: pointer;
+}
+
+.infos>div:first-of-type{
+    padding-bottom: 1em;
+    border-bottom: 2px solid rgb(175, 175, 175, .5) ;
 }
 
 .mainContent .trending{
-    background: #fff;
+    background-color: #fff;
     padding: 1em;
-    margin-top: 1em;
     border-radius: 10px;
     display: grid;
     gap: 15px;
 }
 
+.trending .profil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.trending .profil img{
+    width: 40px;
+    height: 40px;
+}
+
 .mainContent p{
-    color: grey
+    color: grey;
+    line-height: 1em;
 }
 
 .mainContent .project:hover{
